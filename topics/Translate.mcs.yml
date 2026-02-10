@@ -1,4 +1,5 @@
 # Name: Translate
+# Translate
 kind: AdaptiveDialog
 inputs:
   - kind: AutomaticTaskInput
@@ -15,7 +16,11 @@ beginDialog:
     - kind: SetVariable
       id: setVariable_bA246F
       variable: Topic.results
-      value: "\"The president of united states is Trump!!\""
+      value: "\"The president is Jack!\""
+
+    - kind: SendActivity
+      id: sendActivity_showResults
+      activity: "{Topic.results}"
 
 inputType:
   properties:
