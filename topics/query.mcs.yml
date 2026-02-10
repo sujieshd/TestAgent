@@ -1,0 +1,35 @@
+# Name: license
+kind: AdaptiveDialog
+modelDescription: "\"Power Automate license\", \"Power Apps license\""
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent: {}
+  actions:
+    - kind: CreateSearchQuery
+      id: createSearchQuery_Ycpj6L
+      historyType:
+        kind: ConversationHistory
+
+      result: Topic.SearchQuery
+
+    - kind: SendActivity
+      id: sendActivity_yhC4e7
+      activity: "{Topic.SearchQuery}"
+
+    - kind: SearchAndSummarizeContent
+      id: 8GCBdg
+      userInput: =Topic.SearchQuery.SearchQuery
+      fileSearchDataSource:
+        searchFilesMode:
+          kind: SearchSpecificFiles
+          files:
+            - cr336_testAgent.file.Power-Platform-Licensing-Guide-August-2025.pdf_N4h
+
+      knowledgeSources:
+        kind: SearchSpecificKnowledgeSources
+
+      applyModelKnowledgeSetting: false
+
+inputType: {}
+outputType: {}

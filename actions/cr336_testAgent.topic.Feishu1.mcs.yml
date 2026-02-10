@@ -1,0 +1,14 @@
+# Name: Feishu1
+# This server is the Feishu MCP server. It can generate the response from feishu
+kind: TaskDialog
+modelDisplayName: Feishu1
+modelDescription: This server is the Feishu MCP server. It can generate the response from feishu
+action:
+  kind: InvokeExternalAgentTaskAction
+  connectionReference: cr336_testAgent.shared_cr3f1-5ffeishu1-5f4b78cc33b53baee6.cb94c315d34a4f1794195e7674009c9b
+  connectionProperties:
+    mode: Invoker
+
+  operationDetails:
+    kind: ModelContextProtocolMetadata
+    operationId: InvokeServer

@@ -1,0 +1,8 @@
+# Name: Choice
+kind: ClosedListEntity
+items:
+  - id: R19XRr
+    displayName: Create Helpdesk Ticket
+
+  - id: q1CJvi
+    displayName: Start Next Chat

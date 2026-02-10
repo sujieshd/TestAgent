@@ -1,0 +1,27 @@
+# Name: Translate
+kind: AdaptiveDialog
+inputs:
+  - kind: AutomaticTaskInput
+    propertyName: user_query
+    description: The value assigned here should always be English, if not, translate into English
+    shouldPromptUser: true
+
+modelDescription: This topic return general topic knowledge. like "总统", "President"
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent: {}
+  actions:
+    - kind: SetVariable
+      id: setVariable_bA246F
+      variable: Topic.results
+      value: "\"The president of united states is Trump!!\""
+
+inputType:
+  properties:
+    user_query:
+      displayName: user_query
+      description: The value assigned here should always be English, if not, translate into English!
+      type: String
+
+outputType: {}

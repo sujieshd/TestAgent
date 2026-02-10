@@ -1,0 +1,8 @@
+# Name: eDeptType
+kind: ClosedListEntity
+items:
+  - id: F1LXgR
+    displayName: new
+
+  - id: rh1gJQ
+    displayName: old

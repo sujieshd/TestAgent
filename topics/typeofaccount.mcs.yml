@@ -1,0 +1,40 @@
+# Name: typeofaccount
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent: {}
+  actions:
+    - kind: Question
+      id: question_vNsF9s
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: Global.evDeptType
+      prompt: which type of account?
+      defaultValueResponse: No entity was found
+      defaultValue: =Blank()
+      entity:
+        kind: ClosedListEntityReference
+        entityId: cr336_testAgent.entity.eDeptType
+
+    - kind: ConditionGroup
+      id: conditionGroup_7EMoVf
+      conditions:
+        - id: conditionItem_WfAJIa
+          condition: =Global.evDeptType = 'cr336_testAgent.entity.eDeptType'.F1LXgR
+          actions:
+            - kind: SendActivity
+              id: sendActivity_856ZFx
+              activity: said pharmacy
+
+        - id: conditionItem_DS9Cqj
+          condition: =Global.evDeptType = 'cr336_testAgent.entity.eDeptType'.rh1gJQ
+
+      elseActions:
+        - kind: SendActivity
+          id: sendActivity_ttIxoG
+          activity: here
+
+inputType: {}
+outputType: {}

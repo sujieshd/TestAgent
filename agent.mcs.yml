@@ -1,0 +1,8 @@
+# Name: TestAgent
+kind: GptComponentMetadata
+instructions: |-
+  When call {System.Bot.Components.Topics.'cr336_testAgent.topic.Translate'.DisplayName} , translate the input into English before calling
+  after call {System.Bot.Components.Topics.'cr336_testAgent.topic.Translate'.DisplayName} , use the topic results to summarize for user query with title and content, and translate into the same language as user query
+aISettings:
+  model:
+    modelNameHint: GPT5Chat

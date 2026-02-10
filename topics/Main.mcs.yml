@@ -1,0 +1,31 @@
+# Name: Main
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - test jump
+
+  actions:
+    - kind: Question
+      id: question_FEQMVY
+      interruptionPolicy:
+        allowInterruption: true
+
+      repeatCount: 0
+      variable: Global.evDeptType
+      prompt: Question for jump topic
+      defaultValue: =Blank()
+      entity:
+        kind: ClosedListEntityReference
+        entityId: cr336_testAgent.entity.eDeptType
+        selectedItems:
+          - F1LXgR
+
+    - kind: BeginDialog
+      id: cjA6EZ
+      dialog: cr336_testAgent.topic.typeofaccount
+
+inputType: {}
+outputType: {}

@@ -1,0 +1,6 @@
+# Name: Test
+# This knowledge source answers questions found in the following Dataverse items: Test
+kind: KnowledgeSourceConfiguration
+source:
+  kind: DataverseStructuredSearchSource
+  skillConfiguration: Test_55Bl7PQoNh_as9sQSOthL

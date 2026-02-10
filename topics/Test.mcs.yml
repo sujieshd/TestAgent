@@ -1,0 +1,55 @@
+# Name: Test
+kind: AdaptiveDialog
+modelDescription: This topic will be triggered when user input like "test"
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent: {}
+  actions:
+    - kind: Question
+      id: question_eN4zeP
+      interruptionPolicy:
+        allowInterruption: true
+
+      repeatCount: 0
+      variable: init:Topic.UserOption
+      prompt: Was this response helpful?
+      defaultValue: =Blank()
+      entity:
+        kind: EmbeddedEntity
+        definition:
+          kind: ClosedListEntity
+          items:
+            - id: Create Helpdesk Ticket
+              displayName: Create Helpdesk Ticket
+
+            - id: Start Next Chat
+              displayName: Start Next Chat
+
+    - kind: ConditionGroup
+      id: conditionGroup_6a12lG
+      conditions:
+        - id: conditionItem_zWeU7p
+          condition: =Topic.UserOption = 'cr336_testAgent.topic.Test.main.question_eN4zeP'.'Create Helpdesk Ticket'
+          actions:
+            - kind: SendActivity
+              id: sendActivity_Yx3yLP
+              activity: You input {Topic.UserOption}
+
+        - id: conditionItem_xiDti0
+          condition: =Topic.UserOption = 'cr336_testAgent.topic.Test.main.question_eN4zeP'.'Start Next Chat'
+          actions:
+            - kind: SendActivity
+              id: sendActivity_QsxoND
+              activity: You input {Topic.UserOption}
+
+      elseActions:
+        - kind: SendActivity
+          id: sendActivity_NobVg0
+          activity: You input else
+
+    - kind: EndConversation
+      id: dneUyj
+
+inputType: {}
+outputType: {}

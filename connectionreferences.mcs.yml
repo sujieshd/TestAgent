@@ -1,0 +1,5 @@
+﻿connectionReferences:
+  - connectionReferenceLogicalName: cr336_testAgent.shared_cr3f1-5ffeishu1-5f4b78cc33b53baee6.cb94c315d34a4f1794195e7674009c9b
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_cr3f1-5ffeishu1-5f4b78cc33b53baee6
+  - connectionReferenceLogicalName: cr336_testAgent.shared_office365.033e69f0efe64460b85b2251b7569e0a
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_office365
