@@ -16,7 +16,7 @@ beginDialog:
     - kind: SetVariable
       id: setVariable_bA246F
       variable: Topic.results
-      value: "\"The president is Jack!\""
+      value: "\"The president is Jack!!\""
 
     - kind: SendActivity
       id: sendActivity_showResults
